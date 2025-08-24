@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
+import com.Hm.hospital_patient.Model.Singleton;
+
 import an.awesome.pipelinr.Command;
 import an.awesome.pipelinr.Pipelinr;
 
@@ -13,6 +15,7 @@ public class HospitalPatientApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HospitalPatientApplication.class, args);
+		Singleton.getGlobalUserMap();
 	}
 
 	@Bean

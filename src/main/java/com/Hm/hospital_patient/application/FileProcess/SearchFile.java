@@ -36,12 +36,17 @@ public class SearchFile {
   }
 
   public File getFilesByName(String name) {
+    System.err.println("Searching for file with name: " + name);
+    System.out.println("dataBasePath: " + dataBasePath.toAbsolutePath());
     try {
       List<File> files = Files.walk(dataBasePath)
           .filter(Files::isRegularFile)
-          .filter(path -> path.toString().toLowerCase(Locale.ENGLISH).startsWith(name))
+          .filter(path -> path.getFileName().toString()
+              .toLowerCase(Locale.ENGLISH)
+              .startsWith(name.toLowerCase(Locale.ENGLISH)))
           .map(Path::toFile)
           .collect(Collectors.toList());
+      System.out.println("Found files: " + files.size());
       return files.isEmpty() ? null : files.get(0);
     } catch (IOException e) {
       e.printStackTrace();

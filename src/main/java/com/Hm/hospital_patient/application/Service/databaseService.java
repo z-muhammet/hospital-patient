@@ -1,27 +1,25 @@
 package com.Hm.hospital_patient.application.Service;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
+import com.Hm.hospital_patient.Model.Singleton;
 import com.Hm.hospital_patient.Model.User;
 import com.Hm.hospital_patient.Model.UserDatabase;
 import com.Hm.hospital_patient.application.FileProcess.ReadFile;
 import com.Hm.hospital_patient.application.FileProcess.SearchFile;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Path;
 import java.util.List;
 
-@Component
+@Service
 public class databaseService {
   SearchFile searchFile = new SearchFile();
   ReadFile ReadFile = new ReadFile();
 
-  Map<String, User> globalUserMap = new HashMap<>();
+  Map<String, User> globalUserMap = Singleton.getGlobalUserMap();
   UserDatabase db = new UserDatabase();
 
   public databaseService() {
@@ -34,7 +32,7 @@ public class databaseService {
     return globalUserMap;
   }
 
-  public Object get(String key) {
+  public User get(String key) {
     return globalUserMap.get(key);
   }
 
@@ -63,7 +61,16 @@ public class databaseService {
 
   public void remove(String key) {
     globalUserMap.remove(key);
-    searchFile.getFilesByName(key).delete();
+    File fileToDelete = searchFile.getFilesByName(key);
+    if (fileToDelete != null && fileToDelete.exists()) {
+      try {
+        if (!fileToDelete.delete()) {
+          System.err.println("Failed to delete file: " + fileToDelete.getAbsolutePath());
+        }
+      } catch (SecurityException e) {
+        System.err.println("Permission denied to delete file: " + fileToDelete.getAbsolutePath());
+      }
+    }
   }
 
   public boolean containsKey(String key) {
