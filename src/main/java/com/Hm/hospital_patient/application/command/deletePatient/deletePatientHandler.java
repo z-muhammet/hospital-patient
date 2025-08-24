@@ -1,6 +1,7 @@
 package com.Hm.hospital_patient.application.command.deletePatient;
 
 import an.awesome.pipelinr.Command;
+
 import com.Hm.hospital_patient.application.Service.databaseService;
 import org.springframework.stereotype.Component;
 
@@ -17,7 +18,7 @@ public class deletePatientHandler implements Command.Handler<deletePatientReques
   public Boolean handle(deletePatientRequest command) {
     deletePatientDto dto = command.dto;
 
-    if (dto.userKey == null || dto.userKey.isEmpty()) {
+    if (dto.userKey == null || dto.userKey.isEmpty() || _dbService.get(dto.userKey) == null) {
       return false;
     }
     try {
