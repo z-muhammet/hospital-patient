@@ -1,0 +1,16 @@
+C:\Users\muhammet\Desktop\hospital-patient\src\main\java\com\Hm\hospital_patient\application\command\addpatient\AddPatientCommand.java
+C:\Users\muhammet\Desktop\hospital-patient\src\main\java\com\Hm\hospital_patient\application\command\addpatient\AddPatientDto.java
+C:\Users\muhammet\Desktop\hospital-patient\src\main\java\com\Hm\hospital_patient\application\command\addpatient\AddPatientHandler.java
+C:\Users\muhammet\Desktop\hospital-patient\src\main\java\com\Hm\hospital_patient\application\command\deletepatient\DeletePatientCommand.java
+C:\Users\muhammet\Desktop\hospital-patient\src\main\java\com\Hm\hospital_patient\application\command\deletepatient\DeletePatientDto.java
+C:\Users\muhammet\Desktop\hospital-patient\src\main\java\com\Hm\hospital_patient\application\command\deletepatient\DeletePatientHandler.java
+C:\Users\muhammet\Desktop\hospital-patient\src\main\java\com\Hm\hospital_patient\application\command\updatepatient\UpdatePatientCommand.java
+C:\Users\muhammet\Desktop\hospital-patient\src\main\java\com\Hm\hospital_patient\application\command\updatepatient\UpdatePatientDto.java
+C:\Users\muhammet\Desktop\hospital-patient\src\main\java\com\Hm\hospital_patient\application\command\updatepatient\UpdatePatientHandler.java
+C:\Users\muhammet\Desktop\hospital-patient\src\main\java\com\Hm\hospital_patient\application\query\getallpatients\GetAllPatientsDto.java
+C:\Users\muhammet\Desktop\hospital-patient\src\main\java\com\Hm\hospital_patient\application\query\getallpatients\GetAllPatientsHandler.java
+C:\Users\muhammet\Desktop\hospital-patient\src\main\java\com\Hm\hospital_patient\application\query\getallpatients\GetAllPatientsQuery.java
+C:\Users\muhammet\Desktop\hospital-patient\src\main\java\com\Hm\hospital_patient\application\query\getpatientbyid\GetPatientByIdDto.java
+C:\Users\muhammet\Desktop\hospital-patient\src\main\java\com\Hm\hospital_patient\application\query\getpatientbyid\GetPatientByIdHandler.java
+C:\Users\muhammet\Desktop\hospital-patient\src\main\java\com\Hm\hospital_patient\application\query\getpatientbyid\GetPatientByIdQuery.java
+C:\Users\muhammet\Desktop\hospital-patient\src\main\java\com\Hm\hospital_patient\HospitalPatientApplication.java
