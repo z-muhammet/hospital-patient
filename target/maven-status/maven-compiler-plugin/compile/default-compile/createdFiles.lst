@@ -1,1 +1,5 @@
+com\Hm\hospital_patient\Model\UserDatabase.class
 com\Hm\hospital_patient\HospitalPatientApplication.class
+com\Hm\hospital_patient\Model\User.class
+com\Hm\hospital_patient\application\command\addpatient\AddPatientCommand.class
+com\Hm\hospital_patient\application\FileProcess\SearchFile.class
